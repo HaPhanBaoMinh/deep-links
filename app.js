@@ -27,19 +27,18 @@ app.use('/.well-known/assetlinks.json', (req, res) => {
       "namespace": "android_app",
       "package_name": "com.example.exe201_mobile",
       "sha256_cert_fingerprints":
-        ["23:1B:AC:86:7B:80:44:9C:35:98:76:89:FC:BA:1D:E4:17:B0:9A:E4:D3:E0:55:FF:76:06:53:88:E4:C7:47:3A"
-        ]
+        ["23:1B:AC:86:7B:80:44:9C:35:98:76:89:FC:BA:1D:E4:17:B0:9A:E4:D3:E0:55:FF:76:06:53:88:E4:C7:47:3A"]
     }
   };
-}
+
 
   // Đặt kiểu nội dung là JSON
   res.setHeader('Content-Type', 'application/json');
-// hoặc sử dụng phương thức res.type()
-// res.type('application/json');
+  // hoặc sử dụng phương thức res.type()
+  // res.type('application/json');
 
-// Trả về dữ liệu JSON
-res.json(data);
+  // Trả về dữ liệu JSON
+  res.json(JSON_DATE);
 });
 
 app.use('/', indexRouter);
