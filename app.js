@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/.well-known/assetlinks.json', (req, res) => {
-  JSON_DATE = {
+  JSON_DATE = [{
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
@@ -29,7 +29,7 @@ app.use('/.well-known/assetlinks.json', (req, res) => {
       "sha256_cert_fingerprints":
         ["23:1B:AC:86:7B:80:44:9C:35:98:76:89:FC:BA:1D:E4:17:B0:9A:E4:D3:E0:55:FF:76:06:53:88:E4:C7:47:3A"]
     }
-  };
+  }];
 
 
   // Đặt kiểu nội dung là JSON
